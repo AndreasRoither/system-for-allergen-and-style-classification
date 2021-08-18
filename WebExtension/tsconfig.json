@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "noEmit": true,
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["./js/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true
+  },
+  "include": ["./src/js/**/*"],
+  "exclude": ["node_modules"]
+}

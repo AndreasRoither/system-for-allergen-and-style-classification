@@ -1,0 +1,9 @@
+teaspoon, tsp, tablespoon, tablespoons, teaspoons, tbl, tbs, tbsp, fluid ounce,
+fl oz, gill, cup, pint, pt, fl pt, quart, quarts, qt, fl qt, gallon, gal,
+milliliter, ml, millilitre, cc, mL, l, liter, litre, , dl, deciliter, decilitre,
+dl, pound, lb, ounce, oz, mg, milligram, milligramme, g, gram, gramme, kg,
+kilogram, kilogramme, mm, millimeter, millimetre, cm, centimeter, centimetre, m,
+meter, metre, inch, in, milli, centi, deci, hecto, kilo, #, dash, pinch,
+jigger, fluid ounces, can, dessertspoon, heaped, wineglass, spoon, stick, coffeespoon,
+clove, small, medium, large, drop, pottle, piece, jar, glass, package, container, sheet, packed,
+half

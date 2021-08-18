@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>main API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import locale
+import re
+
+import ast
+import nltk
+import pandas as pd
+from nltk.corpus import wordnet
+from nltk.stem import WordNetLemmatizer
+from sklearn.preprocessing import MultiLabelBinarizer, LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
+from collections import Counter
+import colors
+
+kaggle_datasets_out_path = &#34;./datasets/kaggle/out/&#34;
+openf_datasets_out_path = &#34;./datasets/openfoodfacts/out/&#34;
+openf_datasets_in_path = &#34;./datasets/openfoodfacts/&#34;
+
+allergens_classifier = [
+    &#34;en:gluten&#34;, &#34;en:crustaceans&#34;, &#34;en:eggs&#34;, &#34;en:fish&#34;, &#34;en:peanuts&#34;, &#34;en:soybeans&#34;, &#34;en:milk&#34;, &#34;en:nuts&#34;, &#34;en:celery&#34;,
+    &#34;en:mustard&#34;, &#34;en:sesame-seeds&#34;, &#34;en:sulphur-dioxide-and-sulphites&#34;, &#34;en:lupin&#34;, &#34;en:molluscs&#34;
+]
+
+# Set locale for better number printing from 1000 -&gt; 1.000
+locale.setlocale(locale.LC_ALL, &#34;de&#34;)
+lemmatizer = WordNetLemmatizer()
+enc = OneHotEncoder(handle_unknown=&#39;ignore&#39;)
+label_encoder = LabelEncoder()
+mlb = MultiLabelBinarizer()
+integer_encoded = label_encoder.fit_transform(allergens_classifier)
+
+allergens_celery = []
+allergens_crustaceans = []
+allergens_egg = []
+allergens_fish = []
+allergens_gluten = []
+allergens_lupin = []
+allergens_milk = []
+allergens_molluscs = []
+allergens_mustard = []
+allergens_nut = []
+allergens_peanut = []
+allergens_sesame = []
+allergens_soybean = []
+allergens_sds = []
+
+
+def get_wordnet_pos(word):
+    &#34;&#34;&#34;
+    Map POS tag to first character lemmatize() accepts
+
+    Parameters
+    ----------
+    :return: tag from dictionary, N if nothing was found
+    &#34;&#34;&#34;
+    tag = nltk.pos_tag([word])[0][1][0].upper()
+    tag_dict = {&#34;J&#34;: wordnet.ADJ,
+                &#34;N&#34;: wordnet.NOUN,
+                &#34;V&#34;: wordnet.VERB,
+                &#34;R&#34;: wordnet.ADV}
+
+    return tag_dict.get(tag, wordnet.NOUN)
+
+
+def exchange_characters(text):
+    &#34;&#34;&#34;
+    Remove anything that is not a letter except commas and lowers the result &lt;/br&gt;
+    &#39;and&#39; has to be taken care of since it&#39;s mostly used to concatenate two ingredients
+
+    Parameters
+    ----------
+    :param text: string &lt;/br&gt;
+    :return: lowered text with replaced characters
+    &#34;&#34;&#34;
+    result = re.sub(r&#34;[^a-zA-Z\s,]&#34;, &#34;&#34;, str(text)).strip()
+    result = re.sub(r&#34; and &#34;, &#34;,&#34;, result)
+    result = re.sub(r&#34;,,&#34;, &#34;,&#34;, result).strip()
+
+    # remove all whitespace characters (space, tab, newline, return, formfeed)
+    result = &#34; &#34;.join(result.split())
+    return result.lower()
+
+
+def regex_allergen_strip(text):
+    &#34;&#34;&#34;
+    Match text that starts with &#39;en:&#39;, will be used to filter out english allergen tags: &lt;/br&gt;
+    en:gluten, en:crustaceans, en:eggs, en:fish, en:peanuts, en:soybeans, en:milk, en:nuts, en:celery, &lt;/br&gt;
+    en:mustard, en:sesame-seeds, en:sulphur-dioxide-and-sulphites, en:lupin, en:molluscs
+
+    Parameters
+    ----------
+    :param text: &lt;/br&gt;
+    :return: list of matched strings
+    &#34;&#34;&#34;
+    result = re.findall(r&#34;en:[A-Za-z\-]+&#34;, text.lower())
+    final_result = [x for x in result if x in allergens_classifier]
+
+    return final_result
+
+
+def replace_strip(text):
+    &#34;&#34;&#34;
+    Remove newline, carriage return, tabs from string and split by &#39;,&#39;
+
+    Parameters
+    ----------
+    :param text: input text &lt;/br&gt;
+    :return: list of words
+    &#34;&#34;&#34;
+    data = re.sub(r&#34;[\n\r\t]&#34;, &#34;&#34;, text.lower()).split(&#34;,&#34;)
+    data = [item.strip() for item in data]
+    data = list(filter(None, data))
+    return data
+
+
+def lemmatize_strip(text):
+    &#34;&#34;&#34;
+    Lemmatize string
+
+    Parameters
+    ----------
+    :param text: input text &lt;/br&gt;
+    :return: list of lemmatized unique words
+    &#34;&#34;&#34;
+    data = replace_strip(text)
+    lemmatized_terms = [lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in data]
+    return list(set(lemmatized_terms))
+
+
+def initial_processing():
+    &#34;&#34;&#34;
+    Load dataframe and drop columns which are not needed, then exports dataframe to .csv&lt;/br&gt;
+
+    Parameters
+    ----------
+    :return: preprocessed dataframe
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Loading dataset...&#34;)
+
+    df_open_food_facts = pd.read_csv(openf_datasets_in_path + &#34;en.openfoodfacts.org.products.csv&#34;, sep=&#34;\t&#34;,
+                                     low_memory=False)
+    print(colors.positive + &#34;Finished loading dataset...&#34;)
+    print(colors.positive + &#34;Loaded dataset shape &#34; + str(df_open_food_facts.shape))  # &gt; (1382804, 181)
+
+    cols_to_keep = [&#34;url&#34;, &#34;product_name&#34;, &#34;categories&#34;, &#34;categories_en&#34;, &#34;origins&#34;, &#34;countries_en&#34;, &#34;ingredients_text&#34;,
+                    &#34;allergens&#34;, &#34;allergens_en&#34;, &#34;traces&#34;, &#34;traces_tags&#34;, &#34;traces_en&#34;, &#34;additives&#34;, &#34;additives_en&#34;,
+                    &#34;main_category_en&#34;]
+
+    df_open_food_facts = df_open_food_facts[cols_to_keep]
+    df_open_food_facts.to_csv(r&#34;&#34; + openf_datasets_out_path + &#34;openfoodfacts_cols.csv&#34;, index=False, sep=&#34;;&#34;)
+    print(colors.positive + &#34;Exported dataset with fewer cols&#34;)
+
+    return df_open_food_facts.reset_index(drop=True)
+
+
+def dataset_analysis_pre_clean(df):
+    &#34;&#34;&#34;
+    Show various statistics of the dataframe including: &lt;/br&gt;
+    shape, amount of duplicates, null/uniques of possible relevant columns, top n entry counts&lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df: dataframe &lt;/br&gt;
+    :return: -  
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Analysing dataset&#34;)
+
+    print(colors.positive + &#34;Loaded dataset shape &#34; + str(df.shape))
+
+    print(colors.neutral + &#34;Lowercase dataset&#34;)
+    df = df.applymap(lambda s: s.lower() if type(s) == str else s)
+
+    head = &#34;name\tn\n&#34;
+    fmt = &#34;{name:&lt;20s}\t{n:n}&#34;
+
+    print(colors.neutral + &#34;Duplicates &#34;)
+    dup = pd.Series(df.duplicated()).where(lambda x: x).dropna()
+    print(len(dup))
+    print(&#34;\n&#34;)
+
+    # drop duplicates as they are not valuable
+    df = df.drop_duplicates(keep=False)
+
+    print(colors.neutral + &#34;Null values&#34;)
+    print(fmt.format(name=&#34;product_name&#34;, n=len(df[df.product_name.isnull()])))
+    print(fmt.format(name=&#34;categories &#34;, n=len(df[df.categories.isnull()])))
+    print(fmt.format(name=&#34;categories_en &#34;, n=len(df[df.categories_en.isnull()])))
+    print(fmt.format(name=&#34;origins &#34;, n=len(df[df.origins.isnull()])))
+    print(fmt.format(name=&#34;countries_en &#34;, n=len(df[df.countries_en.isnull()])))
+    print(fmt.format(name=&#34;ingredients_text &#34;, n=len(df[df.ingredients_text.isnull()])))
+    print(fmt.format(name=&#34;allergens &#34;, n=len(df[df.allergens.isnull()])))
+    print(fmt.format(name=&#34;allergens_en &#34;, n=len(df[df.allergens_en.isnull()])))
+    print(fmt.format(name=&#34;traces &#34;, n=len(df[df.traces.isnull()])))
+    print(fmt.format(name=&#34;traces_tags &#34;, n=len(df[df.traces_tags.isnull()])))
+    print(fmt.format(name=&#34;traces_en &#34;, n=len(df[df.traces_en.isnull()])))
+    print(fmt.format(name=&#34;additives &#34;, n=len(df[df.additives.isnull()])))
+    print(fmt.format(name=&#34;additives_en &#34;, n=len(df[df.additives_en.isnull()])))
+    print(fmt.format(name=&#34;main_category_en &#34;, n=len(df[df.main_category_en.isnull()])))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Uniques&#34;)
+    print(colors.positive + &#34;product_name\t &#34; + str(df.product_name.unique()))
+    print(colors.positive + &#34;categories\t &#34; + str(df.categories.unique()))
+    print(colors.positive + &#34;categories_en\t &#34; + str(df.categories_en.unique()))
+    print(colors.positive + &#34;origins\t &#34; + str(df.origins.unique()))
+    print(colors.positive + &#34;origins\t &#34; + str(df.countries_en.unique()))
+    print(colors.positive + &#34;ingredients_text\t &#34; + str(df.ingredients_text.unique()))
+    print(colors.positive + &#34;allergens\t &#34; + str(df.allergens.unique()))
+    print(colors.positive + &#34;traces\t &#34; + str(df.traces.unique()))
+    print(colors.positive + &#34;traces_tags\t &#34; + str(df.traces_tags.unique()))
+    print(colors.positive + &#34;traces_en\t &#34; + str(df.traces_en.unique()))
+    print(colors.positive + &#34;additives\t &#34; + str(df.additives.unique()))
+    print(colors.positive + &#34;additives_en\t &#34; + str(df.additives_en.unique()))
+    print(colors.positive + &#34;main_category_en\t &#34; + str(df.main_category_en.unique()))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N Origin counts&#34;)
+    country_counts = df.drop_duplicates().origins.value_counts(dropna=False)
+    print(country_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N Country_en counts&#34;)
+    countries_en_counts = df.drop_duplicates().countries_en.value_counts(dropna=False)
+    print(countries_en_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N allergen counts&#34;)
+    allergen_counts = df[&#34;allergens&#34;].groupby(df[&#34;allergens&#34;]).count().sort_values(ascending=False)
+    print(allergen_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces counts&#34;)
+    traces_counts = df[&#34;traces&#34;].groupby(df[&#34;traces&#34;]).count().sort_values(ascending=False)
+    print(traces_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces_en counts&#34;)
+    traces_en_counts = df[&#34;traces_en&#34;].groupby(df[&#34;traces_en&#34;]).count().sort_values(ascending=False)
+    print(traces_en_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces_tags counts&#34;)
+    traces_tags_counts = df[&#34;traces_tags&#34;].groupby(df[&#34;traces_tags&#34;]).count().sort_values(ascending=False)
+    print(traces_tags_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N ingredients_text counts&#34;)
+    ingredients_text_counts = df[&#34;ingredients_text&#34;].groupby(df[&#34;ingredients_text&#34;]).count().sort_values(
+        ascending=False)
+    print(ingredients_text_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N additives counts&#34;)
+    additives_counts = df[&#34;additives&#34;].groupby(df[&#34;additives&#34;]).count().sort_values(
+        ascending=False)
+    print(additives_counts.nlargest(10))
+
+    print(colors.neutral + &#34;Analysis end&#34;)
+
+
+def dataset_analysis_post_clean(df):
+    &#34;&#34;&#34;
+    Show various statistics of the dataframe including: &lt;/br&gt;
+    top allergen counts, shape of dataframe&lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df:
+    :return:
+    &#34;&#34;&#34;
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N allergen counts&#34;)
+    allergen_counts = df[&#39;allergens&#39;].explode().value_counts()
+    print(allergen_counts)
+
+    distinct_values = df[&#39;allergens&#39;].value_counts()
+    print(distinct_values)
+
+
+def clean_dataset(df):
+    &#34;&#34;&#34;
+    Remove rows and further trim down columns which are not needed. &lt;/br&gt;
+    Rows that contain no information about allergens are dropped &lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df: dataframe to clean &lt;/br&gt;
+    :return: cleaned dataframe
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Cleaning dataframe..&#34;)
+
+    cols_to_keep = [&#34;product_name&#34;, &#34;ingredients_text&#34;,
+                    &#34;allergens&#34;]
+    df = df[cols_to_keep]
+
+    df = df[df.product_name.notnull()]
+    df = df[df.allergens.notnull()]
+
+    df[&#34;allergens&#34;] = df[&#34;allergens&#34;].apply(regex_allergen_strip)
+    df[&#34;product_name&#34;] = df[&#34;product_name&#34;].apply(exchange_characters)
+    df[&#34;ingredients_text&#34;] = df[&#34;ingredients_text&#34;].apply(exchange_characters)
+    df[&#34;ingredients_text&#34;] = df[&#34;ingredients_text&#34;].apply(lemmatize_strip)
+
+    # drop empty allergens again
+    df = df[~df.allergens.str.len().eq(0)]
+
+    print(colors.neutral + &#34;Finished cleaning dataframe&#34;)
+
+    df = df.reset_index(drop=True)
+    df.to_csv(r&#34;&#34; + openf_datasets_out_path + &#34;openfoodfacts_cleaned.csv&#34;, index=False, sep=&#34;;&#34;)
+
+    return df
+
+
+def multi_label_binarize_dataframe(df):
+    &#34;&#34;&#34;
+    One hot encode a given dataframe
+
+    Parameters
+    ----------
+    :param df: dataframe to one hot encode &lt;/br&gt;
+    :return: dataframe with one hot encoding
+    &#34;&#34;&#34;
+
+    final_df = df.join(pd.DataFrame(mlb.fit_transform(df[&#39;allergens&#39;]), columns=mlb.classes_, index=df.index))
+
+    return final_df
+
+
+def load_allergen_list():
+    &#34;&#34;&#34;
+    Load .txt with allergens
+
+    Parameters
+    ----------
+    :return: -
+    &#34;&#34;&#34;
+
+    with open(&#39;./datasets/allergens/celery.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_celery.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/crustaceans.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_crustaceans.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/egg.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_egg.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/fish.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_fish.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/gluten.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_gluten.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/lupin.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_lupin.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/milk.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_milk.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/molluscs.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_molluscs.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/mustard.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_mustard.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/nut.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_nut.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/peanut.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_peanut.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/sesame.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_sesame.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/soybean.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_soybean.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/sulphur-dioxide-sulphites.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_sds.extend(replace_strip(f.read()))
+
+
+def contains_allergen(ingredients):
+    &#34;&#34;&#34;
+    Returns a list of allergens that the ingredients contain
+
+    Parameters
+    ----------
+    :param ingredients: list of ingredients &lt;/br&gt;
+    :return:
+    &#34;&#34;&#34;
+
+    allergens_list = []
+    a_celery = set()
+    a_crustaceans = set()
+    a_egg = set()
+    a_fish = set()
+    a_gluten = set()
+    a_lupin = set()
+    a_milk = set()
+    a_molluscs = set()
+    a_mustard = set()
+    a_nut = set()
+    a_peanut = set()
+    a_sesame = set()
+    a_soybean = set()
+    a_sds = set()
+
+    # if any(allergens in ingredient for allergens in allergens_celery):
+
+    for ingredient_item in ingredients:
+        ingredient_parts = list(filter(None, ingredient_item.split(&#34; &#34;)))
+
+        for ingredient in ingredient_parts:
+            if ingredient in allergens_celery:
+                a_celery.add(ingredient_item)
+            if ingredient in allergens_crustaceans:
+                a_crustaceans.add(ingredient_item)
+            if ingredient in allergens_egg:
+                a_egg.add(ingredient_item)
+            if ingredient in allergens_fish:
+                a_fish.add(ingredient_item)
+            if ingredient in allergens_gluten:
+                a_gluten.add(ingredient_item)
+            if ingredient in allergens_lupin:
+                a_lupin.add(ingredient_item)
+            if ingredient in allergens_milk:
+                a_milk.add(ingredient_item)
+            if ingredient in allergens_molluscs:
+                a_molluscs.add(ingredient_item)
+            if ingredient in allergens_mustard:
+                a_mustard.add(ingredient_item)
+            if ingredient in allergens_nut:
+                a_nut.add(ingredient_item)
+            if ingredient in allergens_peanut:
+                a_peanut.add(ingredient_item)
+            if ingredient in allergens_sesame:
+                a_sesame.add(ingredient_item)
+            if ingredient in allergens_soybean:
+                a_soybean.add(ingredient_item)
+            if ingredient in allergens_sds:
+                a_sds.add(ingredient_item)
+
+    if a_celery:
+        allergens_list.append(&#34;Celery: &#34; + &#39;, &#39;.join(a_celery))
+    if a_crustaceans:
+        allergens_list.append(&#34;Crustaceans: &#34; + &#39;, &#39;.join(a_crustaceans))
+    if a_egg:
+        allergens_list.append(&#34;Egg: &#34; + &#39;, &#39;.join(a_egg))
+    if a_fish:
+        allergens_list.append(&#34;Fish: &#34; + &#39;, &#39;.join(a_fish))
+    if a_gluten:
+        allergens_list.append(&#34;Gluten: &#34; + &#39;, &#39;.join(a_gluten))
+    if a_lupin:
+        allergens_list.append(&#34;Lupin: &#34; + &#39;, &#39;.join(a_lupin))
+    if a_milk:
+        allergens_list.append(&#34;Milk: &#34; + &#39;, &#39;.join(a_milk))
+    if a_molluscs:
+        allergens_list.append(&#34;Molluscs: &#34; + &#39;, &#39;.join(a_molluscs))
+    if a_mustard:
+        allergens_list.append(&#34;Mustard: &#34; + &#39;, &#39;.join(a_mustard))
+    if a_nut:
+        allergens_list.append(&#34;Nut: &#34; + &#39;, &#39;.join(a_nut))
+    if a_peanut:
+        allergens_list.append(&#34;Peanut: &#34; + &#39;, &#39;.join(a_peanut))
+    if a_sesame:
+        allergens_list.append(&#34;Sesame: &#34; + &#39;, &#39;.join(a_sesame))
+    if a_soybean:
+        allergens_list.append(&#34;Soybean: &#34; + &#39;, &#39;.join(a_soybean))
+    if a_sds:
+        allergens_list.append(&#34;SDS: &#34; + &#39;, &#39;.join(a_sds))
+
+    return allergens_list
+
+
+def main():
+    &#34;&#34;&#34;
+    Main entry function.
+
+    Parameters
+    ----------
+    :return: -
+    &#34;&#34;&#34;
+    print(&#34;&gt; Allergens analysis &lt;&#34;)
+
+    # #################
+    # initial processing
+    # #################
+
+    # df_open_food_facts = initial_processing()
+
+    # df_open_food_facts = pd.read_csv(openf_datasets_out_path + &#34;openfoodfacts_cols.csv&#34;, low_memory=False, sep=&#34;;&#34;)
+
+    # #################
+    # dataset analysis before clean
+    # #################
+
+    # dataset_analysis_pre_clean(df_open_food_facts)
+
+    # #################
+    # dataset cleaning
+    # #################
+
+    # df_open_food_facts = clean_dataset(df_open_food_facts)
+
+    # #################
+    # allergy test
+    # #################
+
+    df_open_food_facts = pd.read_csv(openf_datasets_out_path + &#34;openfoodfacts_cleaned.csv&#34;, low_memory=False, sep=&#34;;&#34;)
+    recipe_kaggle_df_cleaned = pd.read_csv(kaggle_datasets_out_path + &#34;train.csv&#34;)
+    df_open_food_facts.allergens = df_open_food_facts.allergens.apply(ast.literal_eval)
+    df_open_food_facts.ingredients_text = df_open_food_facts.ingredients_text.apply(ast.literal_eval)
+    load_allergen_list()
+
+    # #################
+    # dataset analysis after clean
+    # #################
+
+    # dataset_analysis_post_clean(df_open_food_facts)
+
+    for index, row in recipe_kaggle_df_cleaned.head(n=50).iterrows():
+        ingredient_list = row.ingredients.split(&#34;,&#34;)
+
+        allergen_list = contains_allergen(ingredient_list)
+        print(allergen_list)
+
+    # multi_label_binarize_dataframe(df_open_food_facts)
+
+    print(&#34;&gt; Done &lt;&#34;)
+
+
+if __name__ == &#34;__main__&#34;:
+    main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.clean_dataset"><code class="name flex">
+<span>def <span class="ident">clean_dataset</span></span>(<span>df)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove rows and further trim down columns which are not needed. </br>
+Rows that contain no information about allergens are dropped </br></p>
+<h2 id="parameters">Parameters</h2>
+<p>:param df: dataframe to clean </br>
+:return: cleaned dataframe</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def clean_dataset(df):
+    &#34;&#34;&#34;
+    Remove rows and further trim down columns which are not needed. &lt;/br&gt;
+    Rows that contain no information about allergens are dropped &lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df: dataframe to clean &lt;/br&gt;
+    :return: cleaned dataframe
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Cleaning dataframe..&#34;)
+
+    cols_to_keep = [&#34;product_name&#34;, &#34;ingredients_text&#34;,
+                    &#34;allergens&#34;]
+    df = df[cols_to_keep]
+
+    df = df[df.product_name.notnull()]
+    df = df[df.allergens.notnull()]
+
+    df[&#34;allergens&#34;] = df[&#34;allergens&#34;].apply(regex_allergen_strip)
+    df[&#34;product_name&#34;] = df[&#34;product_name&#34;].apply(exchange_characters)
+    df[&#34;ingredients_text&#34;] = df[&#34;ingredients_text&#34;].apply(exchange_characters)
+    df[&#34;ingredients_text&#34;] = df[&#34;ingredients_text&#34;].apply(lemmatize_strip)
+
+    # drop empty allergens again
+    df = df[~df.allergens.str.len().eq(0)]
+
+    print(colors.neutral + &#34;Finished cleaning dataframe&#34;)
+
+    df = df.reset_index(drop=True)
+    df.to_csv(r&#34;&#34; + openf_datasets_out_path + &#34;openfoodfacts_cleaned.csv&#34;, index=False, sep=&#34;;&#34;)
+
+    return df</code></pre>
+</details>
+</dd>
+<dt id="main.contains_allergen"><code class="name flex">
+<span>def <span class="ident">contains_allergen</span></span>(<span>ingredients)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of allergens that the ingredients contain</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param ingredients: list of ingredients </br>
+:return:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def contains_allergen(ingredients):
+    &#34;&#34;&#34;
+    Returns a list of allergens that the ingredients contain
+
+    Parameters
+    ----------
+    :param ingredients: list of ingredients &lt;/br&gt;
+    :return:
+    &#34;&#34;&#34;
+
+    allergens_list = []
+    a_celery = set()
+    a_crustaceans = set()
+    a_egg = set()
+    a_fish = set()
+    a_gluten = set()
+    a_lupin = set()
+    a_milk = set()
+    a_molluscs = set()
+    a_mustard = set()
+    a_nut = set()
+    a_peanut = set()
+    a_sesame = set()
+    a_soybean = set()
+    a_sds = set()
+
+    # if any(allergens in ingredient for allergens in allergens_celery):
+
+    for ingredient_item in ingredients:
+        ingredient_parts = list(filter(None, ingredient_item.split(&#34; &#34;)))
+
+        for ingredient in ingredient_parts:
+            if ingredient in allergens_celery:
+                a_celery.add(ingredient_item)
+            if ingredient in allergens_crustaceans:
+                a_crustaceans.add(ingredient_item)
+            if ingredient in allergens_egg:
+                a_egg.add(ingredient_item)
+            if ingredient in allergens_fish:
+                a_fish.add(ingredient_item)
+            if ingredient in allergens_gluten:
+                a_gluten.add(ingredient_item)
+            if ingredient in allergens_lupin:
+                a_lupin.add(ingredient_item)
+            if ingredient in allergens_milk:
+                a_milk.add(ingredient_item)
+            if ingredient in allergens_molluscs:
+                a_molluscs.add(ingredient_item)
+            if ingredient in allergens_mustard:
+                a_mustard.add(ingredient_item)
+            if ingredient in allergens_nut:
+                a_nut.add(ingredient_item)
+            if ingredient in allergens_peanut:
+                a_peanut.add(ingredient_item)
+            if ingredient in allergens_sesame:
+                a_sesame.add(ingredient_item)
+            if ingredient in allergens_soybean:
+                a_soybean.add(ingredient_item)
+            if ingredient in allergens_sds:
+                a_sds.add(ingredient_item)
+
+    if a_celery:
+        allergens_list.append(&#34;Celery: &#34; + &#39;, &#39;.join(a_celery))
+    if a_crustaceans:
+        allergens_list.append(&#34;Crustaceans: &#34; + &#39;, &#39;.join(a_crustaceans))
+    if a_egg:
+        allergens_list.append(&#34;Egg: &#34; + &#39;, &#39;.join(a_egg))
+    if a_fish:
+        allergens_list.append(&#34;Fish: &#34; + &#39;, &#39;.join(a_fish))
+    if a_gluten:
+        allergens_list.append(&#34;Gluten: &#34; + &#39;, &#39;.join(a_gluten))
+    if a_lupin:
+        allergens_list.append(&#34;Lupin: &#34; + &#39;, &#39;.join(a_lupin))
+    if a_milk:
+        allergens_list.append(&#34;Milk: &#34; + &#39;, &#39;.join(a_milk))
+    if a_molluscs:
+        allergens_list.append(&#34;Molluscs: &#34; + &#39;, &#39;.join(a_molluscs))
+    if a_mustard:
+        allergens_list.append(&#34;Mustard: &#34; + &#39;, &#39;.join(a_mustard))
+    if a_nut:
+        allergens_list.append(&#34;Nut: &#34; + &#39;, &#39;.join(a_nut))
+    if a_peanut:
+        allergens_list.append(&#34;Peanut: &#34; + &#39;, &#39;.join(a_peanut))
+    if a_sesame:
+        allergens_list.append(&#34;Sesame: &#34; + &#39;, &#39;.join(a_sesame))
+    if a_soybean:
+        allergens_list.append(&#34;Soybean: &#34; + &#39;, &#39;.join(a_soybean))
+    if a_sds:
+        allergens_list.append(&#34;SDS: &#34; + &#39;, &#39;.join(a_sds))
+
+    return allergens_list</code></pre>
+</details>
+</dd>
+<dt id="main.dataset_analysis_post_clean"><code class="name flex">
+<span>def <span class="ident">dataset_analysis_post_clean</span></span>(<span>df)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Show various statistics of the dataframe including: </br>
+top allergen counts, shape of dataframe</br></p>
+<h2 id="parameters">Parameters</h2>
+<p>:param df:
+:return:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dataset_analysis_post_clean(df):
+    &#34;&#34;&#34;
+    Show various statistics of the dataframe including: &lt;/br&gt;
+    top allergen counts, shape of dataframe&lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df:
+    :return:
+    &#34;&#34;&#34;
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N allergen counts&#34;)
+    allergen_counts = df[&#39;allergens&#39;].explode().value_counts()
+    print(allergen_counts)
+
+    distinct_values = df[&#39;allergens&#39;].value_counts()
+    print(distinct_values)</code></pre>
+</details>
+</dd>
+<dt id="main.dataset_analysis_pre_clean"><code class="name flex">
+<span>def <span class="ident">dataset_analysis_pre_clean</span></span>(<span>df)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Show various statistics of the dataframe including: </br>
+shape, amount of duplicates, null/uniques of possible relevant columns, top n entry counts</br></p>
+<h2 id="parameters">Parameters</h2>
+<p>:param df: dataframe </br>
+:return: -</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dataset_analysis_pre_clean(df):
+    &#34;&#34;&#34;
+    Show various statistics of the dataframe including: &lt;/br&gt;
+    shape, amount of duplicates, null/uniques of possible relevant columns, top n entry counts&lt;/br&gt;
+
+    Parameters
+    ----------
+    :param df: dataframe &lt;/br&gt;
+    :return: -  
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Analysing dataset&#34;)
+
+    print(colors.positive + &#34;Loaded dataset shape &#34; + str(df.shape))
+
+    print(colors.neutral + &#34;Lowercase dataset&#34;)
+    df = df.applymap(lambda s: s.lower() if type(s) == str else s)
+
+    head = &#34;name\tn\n&#34;
+    fmt = &#34;{name:&lt;20s}\t{n:n}&#34;
+
+    print(colors.neutral + &#34;Duplicates &#34;)
+    dup = pd.Series(df.duplicated()).where(lambda x: x).dropna()
+    print(len(dup))
+    print(&#34;\n&#34;)
+
+    # drop duplicates as they are not valuable
+    df = df.drop_duplicates(keep=False)
+
+    print(colors.neutral + &#34;Null values&#34;)
+    print(fmt.format(name=&#34;product_name&#34;, n=len(df[df.product_name.isnull()])))
+    print(fmt.format(name=&#34;categories &#34;, n=len(df[df.categories.isnull()])))
+    print(fmt.format(name=&#34;categories_en &#34;, n=len(df[df.categories_en.isnull()])))
+    print(fmt.format(name=&#34;origins &#34;, n=len(df[df.origins.isnull()])))
+    print(fmt.format(name=&#34;countries_en &#34;, n=len(df[df.countries_en.isnull()])))
+    print(fmt.format(name=&#34;ingredients_text &#34;, n=len(df[df.ingredients_text.isnull()])))
+    print(fmt.format(name=&#34;allergens &#34;, n=len(df[df.allergens.isnull()])))
+    print(fmt.format(name=&#34;allergens_en &#34;, n=len(df[df.allergens_en.isnull()])))
+    print(fmt.format(name=&#34;traces &#34;, n=len(df[df.traces.isnull()])))
+    print(fmt.format(name=&#34;traces_tags &#34;, n=len(df[df.traces_tags.isnull()])))
+    print(fmt.format(name=&#34;traces_en &#34;, n=len(df[df.traces_en.isnull()])))
+    print(fmt.format(name=&#34;additives &#34;, n=len(df[df.additives.isnull()])))
+    print(fmt.format(name=&#34;additives_en &#34;, n=len(df[df.additives_en.isnull()])))
+    print(fmt.format(name=&#34;main_category_en &#34;, n=len(df[df.main_category_en.isnull()])))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Uniques&#34;)
+    print(colors.positive + &#34;product_name\t &#34; + str(df.product_name.unique()))
+    print(colors.positive + &#34;categories\t &#34; + str(df.categories.unique()))
+    print(colors.positive + &#34;categories_en\t &#34; + str(df.categories_en.unique()))
+    print(colors.positive + &#34;origins\t &#34; + str(df.origins.unique()))
+    print(colors.positive + &#34;origins\t &#34; + str(df.countries_en.unique()))
+    print(colors.positive + &#34;ingredients_text\t &#34; + str(df.ingredients_text.unique()))
+    print(colors.positive + &#34;allergens\t &#34; + str(df.allergens.unique()))
+    print(colors.positive + &#34;traces\t &#34; + str(df.traces.unique()))
+    print(colors.positive + &#34;traces_tags\t &#34; + str(df.traces_tags.unique()))
+    print(colors.positive + &#34;traces_en\t &#34; + str(df.traces_en.unique()))
+    print(colors.positive + &#34;additives\t &#34; + str(df.additives.unique()))
+    print(colors.positive + &#34;additives_en\t &#34; + str(df.additives_en.unique()))
+    print(colors.positive + &#34;main_category_en\t &#34; + str(df.main_category_en.unique()))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N Origin counts&#34;)
+    country_counts = df.drop_duplicates().origins.value_counts(dropna=False)
+    print(country_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N Country_en counts&#34;)
+    countries_en_counts = df.drop_duplicates().countries_en.value_counts(dropna=False)
+    print(countries_en_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N allergen counts&#34;)
+    allergen_counts = df[&#34;allergens&#34;].groupby(df[&#34;allergens&#34;]).count().sort_values(ascending=False)
+    print(allergen_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces counts&#34;)
+    traces_counts = df[&#34;traces&#34;].groupby(df[&#34;traces&#34;]).count().sort_values(ascending=False)
+    print(traces_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces_en counts&#34;)
+    traces_en_counts = df[&#34;traces_en&#34;].groupby(df[&#34;traces_en&#34;]).count().sort_values(ascending=False)
+    print(traces_en_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N traces_tags counts&#34;)
+    traces_tags_counts = df[&#34;traces_tags&#34;].groupby(df[&#34;traces_tags&#34;]).count().sort_values(ascending=False)
+    print(traces_tags_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N ingredients_text counts&#34;)
+    ingredients_text_counts = df[&#34;ingredients_text&#34;].groupby(df[&#34;ingredients_text&#34;]).count().sort_values(
+        ascending=False)
+    print(ingredients_text_counts.nlargest(10))
+
+    print(&#34;\n&#34;)
+    print(colors.neutral + &#34;Top N additives counts&#34;)
+    additives_counts = df[&#34;additives&#34;].groupby(df[&#34;additives&#34;]).count().sort_values(
+        ascending=False)
+    print(additives_counts.nlargest(10))
+
+    print(colors.neutral + &#34;Analysis end&#34;)</code></pre>
+</details>
+</dd>
+<dt id="main.exchange_characters"><code class="name flex">
+<span>def <span class="ident">exchange_characters</span></span>(<span>text)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove anything that is not a letter except commas and lowers the result </br>
+'and' has to be taken care of since it's mostly used to concatenate two ingredients</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param text: string </br>
+:return: lowered text with replaced characters</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def exchange_characters(text):
+    &#34;&#34;&#34;
+    Remove anything that is not a letter except commas and lowers the result &lt;/br&gt;
+    &#39;and&#39; has to be taken care of since it&#39;s mostly used to concatenate two ingredients
+
+    Parameters
+    ----------
+    :param text: string &lt;/br&gt;
+    :return: lowered text with replaced characters
+    &#34;&#34;&#34;
+    result = re.sub(r&#34;[^a-zA-Z\s,]&#34;, &#34;&#34;, str(text)).strip()
+    result = re.sub(r&#34; and &#34;, &#34;,&#34;, result)
+    result = re.sub(r&#34;,,&#34;, &#34;,&#34;, result).strip()
+
+    # remove all whitespace characters (space, tab, newline, return, formfeed)
+    result = &#34; &#34;.join(result.split())
+    return result.lower()</code></pre>
+</details>
+</dd>
+<dt id="main.get_wordnet_pos"><code class="name flex">
+<span>def <span class="ident">get_wordnet_pos</span></span>(<span>word)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Map POS tag to first character lemmatize() accepts</p>
+<h2 id="parameters">Parameters</h2>
+<p>:return: tag from dictionary, N if nothing was found</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_wordnet_pos(word):
+    &#34;&#34;&#34;
+    Map POS tag to first character lemmatize() accepts
+
+    Parameters
+    ----------
+    :return: tag from dictionary, N if nothing was found
+    &#34;&#34;&#34;
+    tag = nltk.pos_tag([word])[0][1][0].upper()
+    tag_dict = {&#34;J&#34;: wordnet.ADJ,
+                &#34;N&#34;: wordnet.NOUN,
+                &#34;V&#34;: wordnet.VERB,
+                &#34;R&#34;: wordnet.ADV}
+
+    return tag_dict.get(tag, wordnet.NOUN)</code></pre>
+</details>
+</dd>
+<dt id="main.initial_processing"><code class="name flex">
+<span>def <span class="ident">initial_processing</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load dataframe and drop columns which are not needed, then exports dataframe to .csv</br></p>
+<h2 id="parameters">Parameters</h2>
+<p>:return: preprocessed dataframe</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def initial_processing():
+    &#34;&#34;&#34;
+    Load dataframe and drop columns which are not needed, then exports dataframe to .csv&lt;/br&gt;
+
+    Parameters
+    ----------
+    :return: preprocessed dataframe
+    &#34;&#34;&#34;
+    print(colors.neutral + &#34;Loading dataset...&#34;)
+
+    df_open_food_facts = pd.read_csv(openf_datasets_in_path + &#34;en.openfoodfacts.org.products.csv&#34;, sep=&#34;\t&#34;,
+                                     low_memory=False)
+    print(colors.positive + &#34;Finished loading dataset...&#34;)
+    print(colors.positive + &#34;Loaded dataset shape &#34; + str(df_open_food_facts.shape))  # &gt; (1382804, 181)
+
+    cols_to_keep = [&#34;url&#34;, &#34;product_name&#34;, &#34;categories&#34;, &#34;categories_en&#34;, &#34;origins&#34;, &#34;countries_en&#34;, &#34;ingredients_text&#34;,
+                    &#34;allergens&#34;, &#34;allergens_en&#34;, &#34;traces&#34;, &#34;traces_tags&#34;, &#34;traces_en&#34;, &#34;additives&#34;, &#34;additives_en&#34;,
+                    &#34;main_category_en&#34;]
+
+    df_open_food_facts = df_open_food_facts[cols_to_keep]
+    df_open_food_facts.to_csv(r&#34;&#34; + openf_datasets_out_path + &#34;openfoodfacts_cols.csv&#34;, index=False, sep=&#34;;&#34;)
+    print(colors.positive + &#34;Exported dataset with fewer cols&#34;)
+
+    return df_open_food_facts.reset_index(drop=True)</code></pre>
+</details>
+</dd>
+<dt id="main.lemmatize_strip"><code class="name flex">
+<span>def <span class="ident">lemmatize_strip</span></span>(<span>text)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Lemmatize string</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param text: input text </br>
+:return: list of lemmatized unique words</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def lemmatize_strip(text):
+    &#34;&#34;&#34;
+    Lemmatize string
+
+    Parameters
+    ----------
+    :param text: input text &lt;/br&gt;
+    :return: list of lemmatized unique words
+    &#34;&#34;&#34;
+    data = replace_strip(text)
+    lemmatized_terms = [lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in data]
+    return list(set(lemmatized_terms))</code></pre>
+</details>
+</dd>
+<dt id="main.load_allergen_list"><code class="name flex">
+<span>def <span class="ident">load_allergen_list</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load .txt with allergens</p>
+<h2 id="parameters">Parameters</h2>
+<p>:return: -</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_allergen_list():
+    &#34;&#34;&#34;
+    Load .txt with allergens
+
+    Parameters
+    ----------
+    :return: -
+    &#34;&#34;&#34;
+
+    with open(&#39;./datasets/allergens/celery.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_celery.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/crustaceans.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_crustaceans.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/egg.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_egg.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/fish.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_fish.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/gluten.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_gluten.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/lupin.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_lupin.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/milk.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_milk.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/molluscs.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_molluscs.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/mustard.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_mustard.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/nut.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_nut.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/peanut.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_peanut.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/sesame.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_sesame.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/soybean.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_soybean.extend(replace_strip(f.read()))
+
+    with open(&#39;./datasets/allergens/sulphur-dioxide-sulphites.txt&#39;, encoding=&#34;utf8&#34;) as f:
+        allergens_sds.extend(replace_strip(f.read()))</code></pre>
+</details>
+</dd>
+<dt id="main.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Main entry function.</p>
+<h2 id="parameters">Parameters</h2>
+<p>:return: -</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    &#34;&#34;&#34;
+    Main entry function.
+
+    Parameters
+    ----------
+    :return: -
+    &#34;&#34;&#34;
+    print(&#34;&gt; Allergens analysis &lt;&#34;)
+
+    # #################
+    # initial processing
+    # #################
+
+    # df_open_food_facts = initial_processing()
+
+    # df_open_food_facts = pd.read_csv(openf_datasets_out_path + &#34;openfoodfacts_cols.csv&#34;, low_memory=False, sep=&#34;;&#34;)
+
+    # #################
+    # dataset analysis before clean
+    # #################
+
+    # dataset_analysis_pre_clean(df_open_food_facts)
+
+    # #################
+    # dataset cleaning
+    # #################
+
+    # df_open_food_facts = clean_dataset(df_open_food_facts)
+
+    # #################
+    # allergy test
+    # #################
+
+    df_open_food_facts = pd.read_csv(openf_datasets_out_path + &#34;openfoodfacts_cleaned.csv&#34;, low_memory=False, sep=&#34;;&#34;)
+    recipe_kaggle_df_cleaned = pd.read_csv(kaggle_datasets_out_path + &#34;train.csv&#34;)
+    df_open_food_facts.allergens = df_open_food_facts.allergens.apply(ast.literal_eval)
+    df_open_food_facts.ingredients_text = df_open_food_facts.ingredients_text.apply(ast.literal_eval)
+    load_allergen_list()
+
+    # #################
+    # dataset analysis after clean
+    # #################
+
+    # dataset_analysis_post_clean(df_open_food_facts)
+
+    for index, row in recipe_kaggle_df_cleaned.head(n=50).iterrows():
+        ingredient_list = row.ingredients.split(&#34;,&#34;)
+
+        allergen_list = contains_allergen(ingredient_list)
+        print(allergen_list)
+
+    # multi_label_binarize_dataframe(df_open_food_facts)
+
+    print(&#34;&gt; Done &lt;&#34;)</code></pre>
+</details>
+</dd>
+<dt id="main.multi_label_binarize_dataframe"><code class="name flex">
+<span>def <span class="ident">multi_label_binarize_dataframe</span></span>(<span>df)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>One hot encode a given dataframe</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param df: dataframe to one hot encode </br>
+:return: dataframe with one hot encoding</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def multi_label_binarize_dataframe(df):
+    &#34;&#34;&#34;
+    One hot encode a given dataframe
+
+    Parameters
+    ----------
+    :param df: dataframe to one hot encode &lt;/br&gt;
+    :return: dataframe with one hot encoding
+    &#34;&#34;&#34;
+
+    final_df = df.join(pd.DataFrame(mlb.fit_transform(df[&#39;allergens&#39;]), columns=mlb.classes_, index=df.index))
+
+    return final_df</code></pre>
+</details>
+</dd>
+<dt id="main.regex_allergen_strip"><code class="name flex">
+<span>def <span class="ident">regex_allergen_strip</span></span>(<span>text)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Match text that starts with 'en:', will be used to filter out english allergen tags: </br>
+en:gluten, en:crustaceans, en:eggs, en:fish, en:peanuts, en:soybeans, en:milk, en:nuts, en:celery, </br>
+en:mustard, en:sesame-seeds, en:sulphur-dioxide-and-sulphites, en:lupin, en:molluscs</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param text: </br>
+:return: list of matched strings</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def regex_allergen_strip(text):
+    &#34;&#34;&#34;
+    Match text that starts with &#39;en:&#39;, will be used to filter out english allergen tags: &lt;/br&gt;
+    en:gluten, en:crustaceans, en:eggs, en:fish, en:peanuts, en:soybeans, en:milk, en:nuts, en:celery, &lt;/br&gt;
+    en:mustard, en:sesame-seeds, en:sulphur-dioxide-and-sulphites, en:lupin, en:molluscs
+
+    Parameters
+    ----------
+    :param text: &lt;/br&gt;
+    :return: list of matched strings
+    &#34;&#34;&#34;
+    result = re.findall(r&#34;en:[A-Za-z\-]+&#34;, text.lower())
+    final_result = [x for x in result if x in allergens_classifier]
+
+    return final_result</code></pre>
+</details>
+</dd>
+<dt id="main.replace_strip"><code class="name flex">
+<span>def <span class="ident">replace_strip</span></span>(<span>text)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove newline, carriage return, tabs from string and split by ','</p>
+<h2 id="parameters">Parameters</h2>
+<p>:param text: input text </br>
+:return: list of words</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def replace_strip(text):
+    &#34;&#34;&#34;
+    Remove newline, carriage return, tabs from string and split by &#39;,&#39;
+
+    Parameters
+    ----------
+    :param text: input text &lt;/br&gt;
+    :return: list of words
+    &#34;&#34;&#34;
+    data = re.sub(r&#34;[\n\r\t]&#34;, &#34;&#34;, text.lower()).split(&#34;,&#34;)
+    data = [item.strip() for item in data]
+    data = list(filter(None, data))
+    return data</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.clean_dataset" href="#main.clean_dataset">clean_dataset</a></code></li>
+<li><code><a title="main.contains_allergen" href="#main.contains_allergen">contains_allergen</a></code></li>
+<li><code><a title="main.dataset_analysis_post_clean" href="#main.dataset_analysis_post_clean">dataset_analysis_post_clean</a></code></li>
+<li><code><a title="main.dataset_analysis_pre_clean" href="#main.dataset_analysis_pre_clean">dataset_analysis_pre_clean</a></code></li>
+<li><code><a title="main.exchange_characters" href="#main.exchange_characters">exchange_characters</a></code></li>
+<li><code><a title="main.get_wordnet_pos" href="#main.get_wordnet_pos">get_wordnet_pos</a></code></li>
+<li><code><a title="main.initial_processing" href="#main.initial_processing">initial_processing</a></code></li>
+<li><code><a title="main.lemmatize_strip" href="#main.lemmatize_strip">lemmatize_strip</a></code></li>
+<li><code><a title="main.load_allergen_list" href="#main.load_allergen_list">load_allergen_list</a></code></li>
+<li><code><a title="main.main" href="#main.main">main</a></code></li>
+<li><code><a title="main.multi_label_binarize_dataframe" href="#main.multi_label_binarize_dataframe">multi_label_binarize_dataframe</a></code></li>
+<li><code><a title="main.regex_allergen_strip" href="#main.regex_allergen_strip">regex_allergen_strip</a></code></li>
+<li><code><a title="main.replace_strip" href="#main.replace_strip">replace_strip</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

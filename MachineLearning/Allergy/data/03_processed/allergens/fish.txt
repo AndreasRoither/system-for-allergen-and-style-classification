@@ -1,0 +1,5 @@
+fish, scrod, anchovies, barracuda, basa, bass, black cod, sablefish, blowfish, bluefish, bombay duck, bream, brill, butter fish, catfish,
+cod, dogfish, dorade, eel, flounder, grouper, haddock, hake, halibut, herring, ilish, john dory, lamprey, lingcod, mackerel,
+mahi mahi, monkfish, mullet, orange roughy, parrotfish, patagonian toothfish, perch, pike, pilchard, pollock, pomfret, pompano,
+sablefish, salmon, sanddab, sardine, sea bass, shad, shark, skate, smelt, snakehead, snapper, sole, sprat, sturgeon, surimi,
+swordfish, tilapia, tilefish, trout, tuna, turbot, wahoo, whitefish, whiting, witch, whitebait

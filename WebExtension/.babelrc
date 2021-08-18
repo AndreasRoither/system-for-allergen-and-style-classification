@@ -1,0 +1,17 @@
+{
+    "presets": ["@babel/preset-react"],
+    "plugins": [
+      ["babel-plugin-styled-components"],
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "~": "./src/js"
+        }
+      }],
+      ["@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
+    ]
+  }

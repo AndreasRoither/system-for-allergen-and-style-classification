@@ -1,0 +1,9 @@
+html,body {
+    height: 500px;
+    width: 700px;
+  }
+  
+  .sidebar-content {
+    display: flex;
+    margin-top: 4em;
+  }

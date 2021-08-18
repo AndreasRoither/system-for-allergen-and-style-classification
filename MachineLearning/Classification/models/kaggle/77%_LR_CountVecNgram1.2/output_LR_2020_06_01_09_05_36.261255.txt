@@ -1,0 +1,54 @@
+> Analytics <
+[*] Training models..
+[*] Testing various models: LR
+
+-------------------
+[*] Running GridSearchCV for LR.
+[+] Done in: 262.7117s
+[*] Best parameters for LR fit are:
+{'max_iter': 1000, 'multi_class': 'auto', 'solver': 'lbfgs'}
+
+-------------------
+[*] Testing: LR
+[*] Running CV on train data for: LR
+[*] Running CV on test data for: LR
+[+] Done in: 3450.0356s
+[+] Accuracy for train data on LR is: [0.7693597  0.78779752 0.77774053 0.77271203 0.77405297 0.78310426
+ 0.77975193 0.76868924 0.76801877 0.78310426]
+[+] Accuracy for test data on LR is: [0.74371859 0.74170854 0.74773869 0.75879397 0.7334004  0.74547284
+ 0.72434608 0.72032193 0.74547284 0.73138833]
+Confusion Matrix LR:
+Classification Report LR:
+              precision    recall  f1-score   support
+
+           0       0.77      0.59      0.67       117
+           1       0.57      0.44      0.50       201
+           2       0.80      0.67      0.73       386
+           3       0.77      0.84      0.81       668
+           4       0.68      0.62      0.65       189
+           5       0.58      0.63      0.60       662
+           6       0.79      0.70      0.74       294
+           7       0.87      0.89      0.88       751
+           8       0.66      0.46      0.54       167
+           9       0.78      0.88      0.83      1960
+          10       0.87      0.68      0.76       131
+          11       0.81      0.71      0.75       356
+          12       0.80      0.73      0.77       207
+          13       0.91      0.92      0.91      1610
+          14       0.84      0.72      0.77       205
+          15       0.61      0.42      0.50       122
+          16       0.72      0.78      0.75      1080
+          17       0.61      0.52      0.56       247
+          18       0.79      0.74      0.76       385
+          19       0.63      0.56      0.59       206
+
+    accuracy                           0.78      9944
+   macro avg       0.74      0.68      0.70      9944
+weighted avg       0.78      0.78      0.77      9944
+
+[+] Mean Absolute Error LR: 1.55008
+[+] Mean Squared Error LR: 15.05973
+[+] Predicted accuracy for LR: 0.7778
+[+] Cohen Kappa Score of LR on test: 0.75145
+[+] Finished training / testing
+[+] Done

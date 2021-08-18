@@ -1,0 +1,275 @@
+C:\Users\Andreas\Documents\git\p12\Implementation\Project\Classification\venv\Scripts\python,exe C:\Users\Andreas\AppData\Local\JetBrains\Toolbox\apps\PyCharm-C\ch-0\201,7223,92\plugins\python-ce\helpers\pydev\pydevd,py --multiproc --qt-support=auto --client 127,0,0,1 --port 61126 --file C:/Users/Andreas/Documents/git/p12/Implementation/Project/Classification/main,py
+pydev debugger: process 4864 is connecting
+Connected to pydev debugger (build 201,7223,92)
+> Recipe Analytics & training <
+[*] Training models,,
+[*] Testing various models: KNN, SVC, LinearSVC, CART, RF, LR
+-------------------
+[*] Running GridSearchCV for KNN,
+[+] Done in: 42,8785s
+[*] Best parameters for KNN fit are:
+{'n_neighbors': 75}
+-------------------
+[*] Running GridSearchCV for SVC,
+Fitting 10 folds for each of 1 candidates, totalling 10 fits
+[+] Done in: 769,7932s
+[*] Best parameters for SVC fit are:
+{'C': 10, 'gamma': 0,001, 'kernel': 'rbf'}
+-------------------
+[*] Running GridSearchCV for LinearSVC,
+[+] Done in: 183,8755s
+[*] Best parameters for LinearSVC fit are:
+{'C': 0,2, 'dual': False, 'max_iter': 1100, 'penalty': 'l1'}
+-------------------
+[*] Running GridSearchCV for CART,
+[+] Done in: 19,8883s
+[*] Best parameters for CART fit are:
+{'max_depth': 120, 'max_features': 'auto', 'min_samples_leaf': 1}
+-------------------
+[*] Running GridSearchCV for RF,
+[+] Done in: 798,5471s
+[*] Best parameters for RF fit are:
+{'class_weight': 'balanced', 'max_depth': 75, 'max_features': 'auto', 'n_estimators': 100}
+-------------------
+[*] Running GridSearchCV for LR,
+[+] Done in: 1791,2907s
+[*] Best parameters for LR fit are:
+{'C': 0,5, 'max_iter': 1000, 'multi_class': 'auto', 'solver': 'lbfgs'}
+-------------------
+
+
+
+
+
+
+
+[*] Testing: KNN
+[*] Running CV on train data for: KNN
+[+] Done in: 255,7915s
+[+] Accuracy for train data on KNN is: [0,40797855 0,3912169  0,41300704 0,40462622 0,39255783 0,41367751
+ 0,38082467 0,37613141 0,39892725 0,3912169 ]
+[+] Accuracy for test data on KNN is: [0,36984925 0,36482412 0,38090452 0,36582915 0,37726358 0,37122736
+ 0,36418511 0,38732394 0,39336016 0,39336016]
+Classification Report KNN:
+f1 score weighted 0,34380148570817237
+
+              precision    recall  f1-score   support
+   brazilian       0,54      0,22      0,32       117
+     british       0,24      0,02      0,04       201
+cajun_creole       0,70      0,04      0,08       386
+     chinese       0,83      0,17      0,28       668
+    filipino       0,75      0,02      0,03       189
+      french       0,33      0,29      0,31       662
+       greek       0,75      0,01      0,02       294
+      indian       0,31      0,59      0,41       751
+       irish       1,00      0,01      0,01       167
+     italian       0,35      0,91      0,50      1960
+    jamaican       0,00      0,00      0,00       131
+    japanese       0,29      0,33      0,31       356
+      korean       0,64      0,13      0,22       207
+     mexican       0,74      0,51      0,61      1610
+    moroccan       0,00      0,00      0,00       205
+     russian       0,00      0,00      0,00       122
+ southern_us       0,46      0,42      0,44      1080
+     spanish       0,00      0,00      0,00       247
+        thai       1,00      0,03      0,06       385
+  vietnamese       0,81      0,06      0,12       206
+    accuracy                           0,41      9944
+   macro avg       0,49      0,19      0,19      9944
+weighted avg       0,51      0,41      0,34      9944
+[+] Mean Absolute Error KNN: 3,47969
+[+] Mean Squared Error KNN: 26,07261
+[+] Predicted accuracy for KNN: 0,4053
+[+] Cohen Kappa Score of KNN on test: 0,3017
+-------------------
+[*] Testing: SVC
+[*] Running CV on train data for: SVC
+[+] Done in: 3503,0104s
+[+] Accuracy for train data on SVC is: [0,7388535  0,75729132 0,75595039 0,7408649  0,73851827 0,75460945
+ 0,75393899 0,74052967 0,7428763  0,75226282]
+[+] Accuracy for test data on SVC is: [0,69447236 0,68542714 0,69648241 0,69045226 0,67102616 0,69517103
+ 0,66800805 0,68812877 0,71730382 0,6971831 ]
+Classification Report SVC:
+f1 score weighted 0,7412237741283318
+              precision    recall  f1-score   support
+   brazilian       0,79      0,51      0,62       117
+     british       0,65      0,24      0,35       201
+cajun_creole       0,81      0,65      0,72       386
+     chinese       0,75      0,86      0,80       668
+    filipino       0,74      0,52      0,61       189
+      french       0,55      0,56      0,56       662
+       greek       0,81      0,61      0,70       294
+      indian       0,87      0,90      0,88       751
+       irish       0,73      0,32      0,44       167
+     italian       0,71      0,90      0,79      1960
+    jamaican       0,98      0,62      0,76       131
+    japanese       0,85      0,59      0,70       356
+      korean       0,83      0,70      0,76       207
+     mexican       0,89      0,91      0,90      1610
+    moroccan       0,87      0,64      0,74       205
+     russian       0,78      0,23      0,35       122
+ southern_us       0,62      0,80      0,70      1080
+     spanish       0,71      0,38      0,50       247
+        thai       0,80      0,72      0,76       385
+  vietnamese       0,70      0,49      0,57       206
+    accuracy                           0,75      9944
+   macro avg       0,77      0,61      0,66      9944
+weighted avg       0,76      0,75      0,74      9944
+[+] Mean Absolute Error SVC: 1,69137
+[+] Mean Squared Error SVC: 16,12942
+[+] Predicted accuracy for SVC: 0,7510
+[+] Cohen Kappa Score of SVC on test: 0,71926
+-------------------
+[*] Testing: LinearSVC
+[*] Running CV on train data for: LinearSVC
+[+] Done in: 850,7639s
+[+] Accuracy for train data on LinearSVC is: [0,77707006 0,78880322 0,78545089 0,76868924 0,76667784 0,78109286
+ 0,77941669 0,7703654  0,77707006 0,77807576]
+[+] Accuracy for test data on LinearSVC is: [0,75477387 0,75778894 0,73266332 0,74170854 0,73138833 0,7444668
+ 0,73440644 0,74044266 0,76257545 0,74144869]
+Classification Report LinearSVC:
+f1 score weighted 0,7733422239357847
+              precision    recall  f1-score   support
+   brazilian       0,75      0,56      0,64       117
+     british       0,62      0,44      0,51       201
+cajun_creole       0,80      0,69      0,74       386
+     chinese       0,76      0,85      0,80       668
+    filipino       0,71      0,52      0,60       189
+      french       0,58      0,62      0,60       662
+       greek       0,79      0,71      0,75       294
+      indian       0,86      0,90      0,88       751
+       irish       0,69      0,42      0,52       167
+     italian       0,78      0,89      0,83      1960
+    jamaican       0,86      0,73      0,79       131
+    japanese       0,82      0,68      0,75       356
+      korean       0,79      0,76      0,77       207
+     mexican       0,89      0,93      0,91      1610
+    moroccan       0,84      0,71      0,77       205
+     russian       0,70      0,43      0,54       122
+ southern_us       0,73      0,79      0,76      1080
+     spanish       0,66      0,47      0,55       247
+        thai       0,77      0,72      0,74       385
+  vietnamese       0,65      0,53      0,58       206
+    accuracy                           0,78      9944
+   macro avg       0,75      0,67      0,70      9944
+weighted avg       0,78      0,78      0,77      9944
+[+] Mean Absolute Error LinearSVC: 1,53852
+[+] Mean Squared Error LinearSVC: 14,91201
+[+] Predicted accuracy for LinearSVC: 0,7787
+[+] Cohen Kappa Score of LinearSVC on test: 0,75203
+-------------------
+[*] Testing: CART
+[*] Running CV on train data for: CART
+[+] Done in: 109,1487s
+[+] Accuracy for train data on CART is: [0,46932618 0,49446866 0,45055313 0,46228629 0,45960443 0,46362722
+ 0,47301374 0,46463292 0,45893396 0,47569561]
+[+] Accuracy for test data on CART is: [0,43718593 0,42211055 0,4040201  0,3959799  0,41247485 0,39839034
+ 0,42354125 0,40643863 0,39134809 0,42152918]
+Classification Report CART:
+f1 score weighted 0,45218318577062566
+              precision    recall  f1-score   support
+   brazilian       0,30      0,23      0,26       117
+     british       0,30      0,15      0,20       201
+cajun_creole       0,39      0,31      0,34       386
+     chinese       0,56      0,46      0,51       668
+    filipino       0,27      0,16      0,20       189
+      french       0,30      0,34      0,32       662
+       greek       0,32      0,20      0,24       294
+      indian       0,54      0,50      0,52       751
+       irish       0,25      0,16      0,19       167
+     italian       0,50      0,69      0,58      1960
+    jamaican       0,40      0,27      0,32       131
+    japanese       0,44      0,44      0,44       356
+      korean       0,34      0,27      0,30       207
+     mexican       0,61      0,63      0,62      1610
+    moroccan       0,40      0,31      0,35       205
+     russian       0,15      0,07      0,09       122
+ southern_us       0,38      0,45      0,41      1080
+     spanish       0,19      0,07      0,10       247
+        thai       0,50      0,48      0,49       385
+  vietnamese       0,40      0,30      0,34       206
+    accuracy                           0,47      9944
+   macro avg       0,38      0,32      0,34      9944
+weighted avg       0,45      0,47      0,45      9944
+[+] Mean Absolute Error CART: 3,47255
+[+] Mean Squared Error CART: 30,75734
+[+] Predicted accuracy for CART: 0,4658
+[+] Cohen Kappa Score of CART on test: 0,3965
+-------------------
+[*] Testing: RF
+[*] Running CV on train data for: RF
+[+] Done in: 4002,649s
+[+] Accuracy for train data on RF is: [0,71371103 0,74220583 0,73013745 0,72376802 0,71873952 0,73550117
+ 0,72946698 0,71706336 0,73147838 0,72779081]
+[+] Accuracy for test data on RF is: [0,72462312 0,68844221 0,68442211 0,67437186 0,66498994 0,70321932
+ 0,67404427 0,66197183 0,70523139 0,70221328]
+Classification Report RF:
+f1 score weighted 0,7263896607127366
+              precision    recall  f1-score   support
+   brazilian       0,53      0,55      0,54       117
+     british       0,41      0,41      0,41       201
+cajun_creole       0,68      0,70      0,69       386
+     chinese       0,71      0,86      0,78       668
+    filipino       0,67      0,40      0,50       189
+      french       0,51      0,56      0,53       662
+       greek       0,75      0,68      0,71       294
+      indian       0,83      0,89      0,86       751
+       irish       0,54      0,33      0,41       167
+     italian       0,76      0,83      0,79      1960
+    jamaican       0,86      0,60      0,70       131
+    japanese       0,81      0,61      0,70       356
+      korean       0,86      0,69      0,76       207
+     mexican       0,86      0,90      0,88      1610
+    moroccan       0,84      0,63      0,72       205
+     russian       0,60      0,31      0,41       122
+ southern_us       0,65      0,70      0,67      1080
+     spanish       0,63      0,39      0,48       247
+        thai       0,77      0,75      0,76       385
+  vietnamese       0,70      0,46      0,56       206
+    accuracy                           0,73      9944
+   macro avg       0,70      0,61      0,64      9944
+weighted avg       0,73      0,73      0,73      9944
+[+] Mean Absolute Error RF: 1,87088
+[+] Mean Squared Error RF: 17,96058
+[+] Predicted accuracy for RF: 0,7321
+[+] Cohen Kappa Score of RF on test: 0,70019
+-------------------
+[*] Testing: LR
+[*] Running CV on train data for: LR
+[+] Done in: 21368,4178s
+[+] Accuracy for train data on LR is: [0,76366074 0,78310426 0,77707006 0,76734831 0,76902447 0,78075763
+ 0,78075763 0,76533691 0,76332551 0,78343949]
+[+] Accuracy for test data on LR is: [0,74070352 0,73366834 0,74170854 0,74572864 0,72132797 0,74144869
+ 0,71629779 0,72132797 0,7444668  0,73742455]
+Classification Report LR:
+f1 score weighted 0,7710175158779315
+              precision    recall  f1-score   support
+   brazilian       0,77      0,53      0,63       117
+     british       0,59      0,42      0,49       201
+cajun_creole       0,80      0,67      0,73       386
+     chinese       0,76      0,85      0,80       668
+    filipino       0,70      0,62      0,66       189
+      french       0,57      0,60      0,59       662
+       greek       0,78      0,68      0,73       294
+      indian       0,86      0,90      0,88       751
+       irish       0,65      0,43      0,51       167
+     italian       0,78      0,88      0,83      1960
+    jamaican       0,91      0,67      0,77       131
+    japanese       0,83      0,67      0,74       356
+      korean       0,82      0,73      0,77       207
+     mexican       0,90      0,92      0,91      1610
+    moroccan       0,84      0,71      0,77       205
+     russian       0,60      0,40      0,48       122
+ southern_us       0,71      0,79      0,75      1080
+     spanish       0,65      0,51      0,57       247
+        thai       0,79      0,73      0,76       385
+  vietnamese       0,67      0,56      0,61       206
+    accuracy                           0,78      9944
+   macro avg       0,75      0,66      0,70      9944
+weighted avg       0,77      0,78      0,77      9944
+[+] Mean Absolute Error LR: 1,54918
+[+] Mean Squared Error LR: 14,95022
+[+] Predicted accuracy for LR: 0,7755
+[+] Cohen Kappa Score of LR on test: 0,74862
+[+] Finished training / testing
+[+] Done

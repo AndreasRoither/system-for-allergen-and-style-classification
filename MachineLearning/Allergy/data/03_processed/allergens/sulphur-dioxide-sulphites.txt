@@ -1,0 +1,4 @@
+sulphur, sulphur dioxide, sulphite, sulphites, potassium bisulphite, metabisulphite, sodium bisulphite, dithionite,
+metabisulphite, sulphiting agents, sulphurous acid, e220, sulphur dioxide, e221 sodium sulphite, e222, sodium hydrogen sulphite,
+e223, sodium metabisulphite, e224, potassium metabisulphite, e226, calcium sulphite, e227, calcium hydrogen sulphite,
+e228, potassium hydrogen sulphite, e150b, caustic sulphite caramel, e150d, sulphite ammonia caramel

@@ -1,0 +1,62 @@
+{
+  "manifest_version": 2,
+  "name": "Food allergen and style detection",
+  "version": "1.0.0",
+  "description": "Helps you decide which recipe to use by analyzing contents for food allergens.",
+  "default_title": "IMA",
+  "default_popup": "feature/extension/extension.html",
+  "icons": {
+    "64": "icons/icon-64.png"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "activeTab",
+    "tabs",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "64": "icons/icon-64.png"
+    },
+    "default_title": "IMA",
+    "default_popup": "feature/extension/extension.html"
+  },
+  "options_ui": {
+    "page": "feature/settings/settings.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle feature foo"
+    },
+    "site-scan": {
+      "suggested_key": {
+        "default": "Alt+Shift+A",
+        "linux": "Ctrl+Shift+A"
+      },
+      "description": "Send a complete site scan event to the extension"
+    },
+    "selected-content-scan": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "linux": "Ctrl+Shift+C"
+      },
+      "description": "Send the currently selected content to the extension"
+    }
+  },
+  "background": {
+    "scripts": ["js/background/background.ts"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["js/content/content.ts"]
+    }
+  ]
+}

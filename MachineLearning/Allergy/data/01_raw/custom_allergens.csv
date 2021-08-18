@@ -1,0 +1,373 @@
+allergens	product_name	countries_en	ingredients_text	en:celery	en:crustaceans	en:eggs	en:fish	en:gluten	en:lupin	en:milk	en:molluscs	en:mustard	en:nuts	en:peanuts	en:sesame-seeds	en:soybeans	en:sulphur-dioxide-and-sulphites
++	+	+	celery	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	celariac	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	celeriac	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	celery leaf	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	celery seed	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	celery stalk	1	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	hermit crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	crayfish	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	isopod	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mantis shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mussel shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mysids	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mysid	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	sea spider	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	prawn	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	acetes	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	acocil	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	american lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	california spiny lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	caridea	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	chaceon fenneri	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	chinese mitten crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	chinese white shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	coconut crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	dungeness crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	tasmanian giant crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	ranina ranina	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	crangon crangon	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	dried shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	indian prawn	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	japanese spiny lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	jonah crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	king crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	krill	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	lobuster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mantis shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	pie crust crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	shrimp paste	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	soft+shell crab	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	spiny lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	squat lobster	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	squilla mantis	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	white shrimp	0	1	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	egg	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	egg white	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	eggroll	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	albumin	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mayonnaise	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mayonaise	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	mayo	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	eggnog	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	meringue	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	hollandaise	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	sauce hollandaise	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	hollandaise sauce	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	tartar sauce	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	tartar	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	simplesse 	0	0	1	0	0	0	0	0	0	0	0	0	0	0
++	+	+	fish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	scrod	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	anchovies	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	barracuda	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	basa	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	bass	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	black cod	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sablefish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	blowfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	bluefish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	bombay duck	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	bream	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	brill	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	butter fish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	catfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	cod	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	dogfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	dorade	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	eel	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	flounder	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	grouper	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	haddock	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	hake	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	halibut	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	herring	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	ilish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	john dory	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	lamprey	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	lingcod	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	mackerel	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	mahi mahi	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	monkfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	mullet	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	orange roughy	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	parrotfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	patagonian toothfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	perch	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	pike	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	pilchard	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	pollock	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	pomfret	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	pompano	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sablefish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	salmon	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sanddab	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sardine	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sea bass	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	shad	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	shark	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	skate	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	smelt	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	snakehead	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	snapper	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sole	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sprat	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	sturgeon	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	surimi	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	swordfish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	tilapia	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	tilefish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	trout	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	tuna	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	turbot	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	wahoo	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	whitefish	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	whiting	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	witch	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	whitebait	0	0	0	1	0	0	0	0	0	0	0	0	0	0
++	+	+	wheat	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	semolina	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	spelt	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	kamut	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	einkorn	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	eincorn	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	faro	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	barley	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	rye	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	oat	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	malt	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	couscous	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	farina	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	emmer	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	faro	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	fu	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	gliadin	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	graham flour	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	flour	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	matzo	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	bulgur	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	seitan	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	triticale	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	mir	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	durum wheat	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	baking powder	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	beer	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	bread	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	bread crumbs	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	bread crumb	0	0	0	0	1	0	0	0	0	0	0	0	0	0
++	+	+	lupin	0	0	0	0	0	0	0	0	0	0	0	0	0	0
++	+	+	lupin	0	0	0	0	0	1	0	0	0	0	0	0	0	0
++	+	+	lupine	0	0	0	0	0	1	0	0	0	0	0	0	0	0
++	+	+	egg, lupine	0	0	1	0	0	1	0	0	0	0	0	0	0	0
++	+	+	milk, lupine	0	0	0	0	0	1	1	0	0	0	0	0	0	0
++	+	+	milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	cheese	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	feta	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	cream	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	curd	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	whipped cream	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	custard	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	ghee	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	ice cream	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	ice milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sherbet	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	whey	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	nougat	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	pudding	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	quark	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sour cream	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	yogurt	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	milkshake	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	acidophilus milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	buttermilk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	buttermilk blend	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	buttermilk solids	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	cultured milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	condensed milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	dried milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	evaporated milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	fat free milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	fully cream milk powder	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	goat’s milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	lactose free milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	low fat milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	malted milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	milk powder	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	milk solids	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	milk solid pastes	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	nonfat dry milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	nonfat milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	nonfat milk solid	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	pasteurised milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	powdered milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sheep’s milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	skim milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	skim milk powder	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sour milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sour milk solids	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sweet cream buttermilk powder	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sweetened condensed milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	sweetened condensed skim milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	whole milk	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	artificial butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	artificial butter flavour	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter extract	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter fat	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter flavoured oil	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	butter solids	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	dairy butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	natural butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	natural butter flavour	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	whipped butter	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	gouda	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	dairy	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	marzipan	0	0	0	0	0	0	1	0	0	0	0	0	0	0
++	+	+	oyster	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	snail	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	squid	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	scallop	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	mussel	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	clam	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	cockle	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	abalone	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	octopus	0	0	0	0	0	0	0	1	0	0	0	0	0	0
++	+	+	mustard	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	mustard powder	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	mustard seeds	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	mustard flour	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	mustard leaves	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	mustard oil	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	sprouted mustard seeds	0	0	0	0	0	0	0	0	1	0	0	0	0	0
++	+	+	nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	almond	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	hazelnut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	walnut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	pecan	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	pecan nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	brazil nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	pistachio nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	macadamia	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	macadamia nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	queensland nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	cashew	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	hickory nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	pine nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	pistachio	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	chinquapin	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	heartnut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	butternut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	lichee nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	nangai nut	0	0	0	0	0	0	0	0	0	1	0	0	0	0
++	+	+	peanut	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	arachis oil	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	mandelona	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	mandelona nut	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	monkey nut	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	ground nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	beer nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	nut meat	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	kernels	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	arachis hypogaea	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	artificial nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	beer nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	boiled peanuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	crushed nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	crushed peanuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	earth nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	goober peas	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	ground nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	ground peanuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	mixed nuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	nut pieces	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	nutmeat	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut butter	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut butter morsels	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut flour	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut paste	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut sauce	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	peanut syrup	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	virginia peanuts	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	kare+kare	0	0	0	0	0	0	0	0	0	0	1	0	0	0
++	+	+	sesame	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	sesame oil	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	tahini paste	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	tahini	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	tahina	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	tehina	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	benne	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	benne seed	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	benniseed	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	gingelly	0	0	0	0	0	0	0	0	0	0	0	1	0	0
++	+	+	soy	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybean	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	edamame	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	miso	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	natto	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	shoyu	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soya	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	tamari	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	tempeh	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	tofu	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	teriyaki sauce	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	yaki+dofu	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	yaki dofu	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	yuba	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy flour	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soya milk	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soya nuts	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	bean curd	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	kinnoko flour	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	kyodofu	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	okara	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	shoyu sauce	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy albumin	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy concentrate	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy fiber	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy grits	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy milk	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy miso	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy nuts	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy nut butter	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy protein	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy protein concentrate	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy protein isolate	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy sauce	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy sprouts	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soya	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soya flour	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybeans	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybean granules	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybean curd	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybean flour	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy lecithin	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soybean paste	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	supro	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy flour	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	soy oil	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	metabisulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sulphiting agents	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sulphurous acid	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e220	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sulphur dioxide	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e221 sodium sulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e222	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sodium hydrogen sulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e223	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sodium metabisulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e224	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	potassium metabisulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e226	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	calcium sulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e227	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	calcium hydrogen sulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e228	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	potassium hydrogen sulphite	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e150b	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	caustic sulphite caramel	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	e150d	0	0	0	0	0	0	0	0	0	0	0	0	1	0
++	+	+	sulphite ammonia caramel	0	0	0	0	0	0	0	0	0	0	0	0	1	0

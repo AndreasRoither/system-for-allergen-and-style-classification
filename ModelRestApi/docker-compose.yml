@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  api:
+    container_name: model-rest-api
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 8000:8000
+    restart: unless-stopped

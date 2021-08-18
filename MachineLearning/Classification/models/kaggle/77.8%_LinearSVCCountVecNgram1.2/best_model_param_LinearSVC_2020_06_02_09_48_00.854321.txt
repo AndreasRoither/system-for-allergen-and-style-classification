@@ -1,0 +1,5 @@
+{
+    "C": 0.2,
+    "dual": false,
+    "penalty": "l1"
+}

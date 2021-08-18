@@ -1,0 +1,1 @@
+chinese, indian, japanese, korean, thai, european, italian, american, mexican, eastern, mediterranean, french, spanish
