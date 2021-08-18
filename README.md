@@ -2,7 +2,7 @@
 <h1 align="center">
   <!--<a name="logo" href=""><img src="" alt="Logo" width="200"></a>-->
   <br>
-  System for allergen and style classification Documentation
+  System for allergen and style classification
 
   ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
