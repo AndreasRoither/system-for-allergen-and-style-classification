@@ -1,4 +1,4 @@
-FROM python:3.8.0-slim as base
+FROM python:3.9.6-slim as base
 LABEL maintainer="Andreas Roither <andi.roither@protonmail.com"
 
 # First stage
@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Second stage
-FROM python:3.8.0-slim as app
+FROM python:3.9.6-slim as app
 
 # set virtual environment as default so it works on CMD and RUN
 ENV VIRTUAL_ENV=/venv
