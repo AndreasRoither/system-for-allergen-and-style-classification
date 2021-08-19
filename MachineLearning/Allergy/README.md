@@ -4,7 +4,7 @@
   <br>
   Allergen Machine Learning Documentation
 
-  ![Python](https://img.shields.io/badge/python-v3.7-blue.svg)
+  ![Python](https://img.shields.io/badge/python-v3.8-blue.svg)
 </h1>
 
 ## Overview
