@@ -9,6 +9,6 @@ scipy==1.6.0
 starlette==0.13.6
 threadpoolctl==2.1.0
 uvicorn==0.13.3
-requests==2.25.1
+requests==2.26.0
 pytest==6.2.1
 nltk~=3.5
