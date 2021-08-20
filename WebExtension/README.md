@@ -30,7 +30,7 @@ yarn firefox|chrome
 
 Promise based HTTP client for the browser and node.js.  
 
-### [parcel-plugin-web-extension](https://github.com/parcel-bundler/parcel
+### [parcel-plugin-web-extension](https://github.com/parcel-bundler/parcel)
 
 This parcel plugin enables you to use a WebExtension manifest.json as an entry point. For more information about manifest.json, please refer to the [MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) docs.
 
