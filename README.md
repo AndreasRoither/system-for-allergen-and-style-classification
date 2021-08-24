@@ -39,7 +39,7 @@ Given the rise in the prevalence of food allergy [@tang2017food], additional mea
 
 ## Technology used
 
-Idea:  
+IDE:  
 [IntelliJ IDEA](https://www.jetbrains.com/idea/)  
 
 Other tools/libraries:  
