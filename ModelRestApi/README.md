@@ -34,7 +34,7 @@ docker-compose up -d
 
 ## Technology used
 
-Idea:  
+IDE:  
 [IntelliJ IDEA](https://www.jetbrains.com/idea/)  
 
 [Python 3.7](https://www.python.org/)  
