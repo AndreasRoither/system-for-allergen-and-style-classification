@@ -45,7 +45,6 @@ IDE:
 Other tools/libraries:  
 [React](https://reactjs.org/)  
 [Parcel](https://parceljs.org/)  
-[NodeJS](https://nodejs.org/)
 [Python](https://www.python.org/)  
 [Docker](https://www.docker.com/)  
 [scikit-learn](https://scikit-learn.org/)
