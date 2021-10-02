@@ -19,7 +19,7 @@ scikit-multilearn==0.2.0
 scipy==1.7.1
 seaborn==0.11.2
 six==1.15.0
-threadpoolctl==2.1.0
+threadpoolctl==3.0.0
 tqdm==4.62.2
 wordcloud==1.8.0
 xgboost==1.4.2
