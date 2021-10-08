@@ -1,5 +1,5 @@
 uvicorn~=0.15.0
-fastapi~=0.68.0
+fastapi~=0.70.0
 pydantic~=1.8.2
 joblib~=1.0.0
 numpy~=1.21.2
