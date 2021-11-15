@@ -10,7 +10,7 @@ import pandas as pd
 import seaborn as sns
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
-# Tweet tokenizer does not split at apostophes which is what we want
+# Tweet tokenizer does not split at apostrophes which is what we want
 from nltk.tokenize import TweetTokenizer
 # FeatureEngineering
 from sklearn.ensemble import RandomForestClassifier
@@ -29,7 +29,6 @@ from sklearn.tree import DecisionTreeClassifier
 import colors
 # settings
 from analytics import Analytics
-from mlsmote import MLSMOTE
 
 # set background color
 plt.rcParams['axes.facecolor'] = '#FFFFFF'
@@ -46,7 +45,6 @@ lem = WordNetLemmatizer()
 tokenizer = TweetTokenizer()
 
 analytics = Analytics()
-mlsmote = MLSMOTE()
 
 openf_datasets_processed_path = "../data/03_processed/openfoodfacts/"
 modelPath = "../models/"
