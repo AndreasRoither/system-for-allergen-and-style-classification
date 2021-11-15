@@ -3,10 +3,16 @@
   <!--<a name="logo" href=""><img src="" alt="Logo" width="200"></a>-->
   <br>
   System for allergen and style classification
+  <br>
+  - Archived -
 
   ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 </h1>
+
+# Preface
+
+This project is archived and is for future reference only. It is not maintained anymore and any usage is at your own risk. If you want to test it out you need to train a model from start. You can do so by navigatin to the `MachineLearning/Allergy` folder, install the requirements and run `main.py`. Change any parameters you like, models can then be loaded using the `ModelRestAPI`, detailed instructions are provided in the `README.md` file. 
 
 ## Overview
 

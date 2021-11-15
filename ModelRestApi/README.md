@@ -8,7 +8,7 @@
 
 ## Overview
 
-The Model REST API is a RESTful API that provides access to various machine learning models. The REST API is written in Python and uses FastAPI, a high-performance web framework to build APIs. The API has three main components: the model loader, preprocessor and the main app, which serves the endpoints.
+The Model REST API is a RESTful API that provides access to various machine learning models. The REST API is written in Python and uses FastAPI, a high-performance web framework to build APIs. The API has three main components: the model loader, preprocessor and the main app, which serves the endpoints. If you want to load your own trained models, place them in the `models/allergen_single` folder for models that have only one file.
 
 ## Endpoints
 
